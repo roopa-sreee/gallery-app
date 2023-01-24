@@ -1,0 +1,35 @@
+/* Write your code here. */
+.home-container {
+  padding: 20px;
+  margin: 20px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+}
+.selected-image-container {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected-image {
+  width: 70%;
+  height: 55%;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+.heading-text {
+  color: #1e293b;
+  font-family: 'Roboto';
+  font-size: 32px;
+}
+.description {
+  color: #64748b;
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+}
