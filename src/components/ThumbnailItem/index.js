@@ -14,7 +14,7 @@ const ThumbnailItem = props => {
   return (
     <>
       <li className="thumbnail-item-container">
-        <button type="button" onClick={onClickThumbnailItem}>
+        <button type="button" onClick={onClickThumbnailItem} className="button">
           <img
             src={thumbnailUrl}
             className={`thumbnail-image ${selectedImageClassName}`}

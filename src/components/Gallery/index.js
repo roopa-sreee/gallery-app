@@ -85,27 +85,15 @@ class Gallery extends Component {
     this.setState({activeImageId: imageId})
   }
 
-  getSelectedImage = () => {
-    const {activeImageId} = this.state
-    const selectedImage = imagesList.filter(
-      eachImage => eachImage.id === activeImageId,
-    )
-    return selectedImage
-  }
-
   render() {
     const {activeImageId} = this.state
-    const selectedImage = this.getSelectedImage()
+    const {imageUrl, imageAltText} = imagesList[activeImageId]
 
     return (
       <div>
         <div className="home-container">
           <div className="selected-image-container">
-            <img
-              src={selectedImage.imageUrl}
-              className="selected-image"
-              alt={selectedImage.imageAltText}
-            />
+            <img src={imageUrl} className="selected-image" alt={imageAltText} />
           </div>
           <h1 className="heading-text">Nature Photography</h1>
           <p className="description">Nature Photography by Rahul</p>
@@ -114,7 +102,7 @@ class Gallery extends Component {
               <ThumbnailItem
                 key={eachImage.id}
                 thumbnailDetails={eachImage}
-                onClick={this.onClickThumbnail}
+                onClickThumbnail={this.onClickThumbnail}
                 isSelected={activeImageId === eachImage.id}
               />
             ))}
